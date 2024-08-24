@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+}
+
+.cat {
+    width: 500px;
+    height: 500px;
+    animation: walk 10s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        transform: translateX(-100vw) rotate(0deg);
+    }
+    50% {
+        transform: translateX(50vw) rotate(10deg);
+    }
+    100% {
+        transform: translateX(100vw) rotate(0deg);
+    }
+}
