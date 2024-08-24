@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form</title>
+    <style>
+        .error{
+            color:red;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h3>Simple Validatation form</h3>
+<form action="" id="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+    <span id="nameError" class="error">Please enter your name</span><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+    <span id="emailError" class="error">Please Enter the valid name</span><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br>
+    <span id="passwordError" class="error">Please enter your password</span><br>
+    <input type="submit" value="submit">
+
+</form>
+<script>
+    function validateForm(){
+        let isValid=true;
+    
+    document.getElementById("nameError").style.display="none";
+    document.getElementById("emailError").style.display="none";
+    document.getElementById("passwordError").style.display="none";
+
+    let name=document.getElementById("name").value.trim();
+    let email=document.getElementById("email").value.trim();
+    let password=document.getElementById("password").value.trim();
+
+    if(name===""){
+        document.getElementById("nameError").style.display="block";
+        isValid="false";
+       
+    }
+    
+    if(email==="" ||!email.includes('@')||!email.includes('.')){
+        document.getElementById("emailError").style.display="block";
+        isValid="false";
+       
+    }
+    
+    if(password===""){
+        document.getElementById("passwordError").style.display="block";
+        isValid="false";
+       
+    }
+
+    return isValid;
+}
+
+</script>
+    
+</body>
+</html>
