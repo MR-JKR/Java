@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(book-page-wallpaper-6.jpg);
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: linear-gradient(to right, #ff5100, #000000);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navbar img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.super {
+    background-image: url(main-Cover.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.super::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.7);
+}
+
+.super h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.super p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.super .btn {
+    background: linear-gradient(to right, #e67e22, #e74c3c);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.super .btn:hover {
+    background: linear-gradient(to right, #e74c3c, #e67e22);
+}
+
+.services {
+    padding: 70px 20px;
+    text-align: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px 20px 0 0;
+}
+
+.services h3 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #e74c3c;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.super h2, .super p, .super .btn {
+    animation: fadeInUp 1s ease-out;
+}
